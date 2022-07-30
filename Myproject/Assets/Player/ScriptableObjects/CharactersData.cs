@@ -15,4 +15,12 @@ public class CharactersData : ScriptableObject {
     public float attackRange;
 
     public bool isPlayer;
+    public CharacterType type;
+}
+
+public enum CharacterType {
+    Hamburguer,
+    Pizza,
+    Broccoli,
+    Carrot
 }
