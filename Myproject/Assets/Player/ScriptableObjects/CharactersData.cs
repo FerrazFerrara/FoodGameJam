@@ -6,6 +6,12 @@ using UnityEngine;
 public class CharactersData : ScriptableObject {
     public float velocity;
     public float health;
-    public float damage;
     public float defense;
+    public float damage;
+
+    public float attackCountdown;
+    public float attackVelocity;
+    public float attackTime;
+    public float attackRange;
+    public Transform hitbox;
 }
