@@ -13,4 +13,6 @@ public class CharactersData : ScriptableObject {
     public float attackVelocity;
     public float attackTime;
     public float attackRange;
+
+    public bool isPlayer;
 }

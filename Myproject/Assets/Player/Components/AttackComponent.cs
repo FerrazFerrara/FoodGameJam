@@ -25,7 +25,11 @@ public class AttackComponent : MonoBehaviour {
         attackTime = data.attackTime;
         hitbox = transform;
         attackRange = data.attackRange;
-        attackableLayer = LayerMask.GetMask("Enemy");
+        if (data.isPlayer) {
+            attackableLayer = LayerMask.GetMask("Enemy");
+        } else {
+            attackableLayer = LayerMask.GetMask("Player");
+        }
     }
 
     private void FixedUpdate() {
