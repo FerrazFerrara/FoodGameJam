@@ -9,7 +9,6 @@ public class AttackComponent : MonoBehaviour {
     private bool isCountdown = false;
     private float countdownTimer;
 
-    private float attackCount = 0;
     private float attackVelocity;
     private float attackTime;
     
@@ -23,10 +22,8 @@ public class AttackComponent : MonoBehaviour {
         countdownTimer = data.attackCountdown;
         attackVelocity = data.attackVelocity;
         attackTime = data.attackTime;
-
-        hitbox = GetComponent<Player>().hitBox;
-
-        attackRange = 1.5f;
+        hitbox = data.hitbox;
+        attackRange = data.attackRange;
         attackableLayer = LayerMask.GetMask("Enemy");
     }
 
@@ -40,7 +37,7 @@ public class AttackComponent : MonoBehaviour {
         if (canAttack && !isCountdown) {
             countdown = countdownTimer;
             isCountdown = true;
-            Attack();
+            MeeleAttack();
         }
     }
 
