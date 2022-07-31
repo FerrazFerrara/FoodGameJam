@@ -5,10 +5,16 @@ using UnityEngine;
 public class CharacterContainer : MonoBehaviour {
     public CharactersData data;
 
-    // public void SetModifier(float modifier, EnemyType enemyType) {
-        // settar os novos atributos dos inimigos
-        // com base no tipo de inimigo
-    // }
+    public void SetModifier(float modifier, CharacterType characterType) {
+        switch (characterType) {
+            case CharacterType.Carrot:
+                break;
+            case CharacterType.Broccoli:
+                break;
+            default:
+                break;
+        }
+    }
 
     public void SetNewStats(CharactersData newData) {
         data = newData;
